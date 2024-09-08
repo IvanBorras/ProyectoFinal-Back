@@ -11,10 +11,17 @@ const userController = {
         try {
             const { name, email, password } = req.body;
 
+            // Verificar si el usuario ya existe
+            const existingUser = await User.findOne({ email });
+            if (existingUser) {
+                return res.status(409).json({ message: 'Usuario ya existe' }); // Retornar un error 409 si el usuario ya existe
+            }
+
+            // Crear un nuevo usuario
             const newUser = new User({
                 name,
                 email,
-                password: password,
+                password,
                 role: 'user'
             });
 

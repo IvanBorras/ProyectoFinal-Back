@@ -14,11 +14,11 @@ mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch(err => console.error('MongoDB connection error:', err));
 
   const users = [
-    { _id: new mongoose.Types.ObjectId(), name: "Alice Johnson", email: "alice@example.com", password: "password123", role: "user" },
-    { _id: new mongoose.Types.ObjectId(), name: "Admin", email: "admin@gmail.com", password: "1", role: "admin" },
-    { _id: new mongoose.Types.ObjectId(), name: "Charlie Brown", email: "charlie@example.com", password: "password123", role: "user" },
-    { _id: new mongoose.Types.ObjectId(), name: "Dana Scully", email: "dana@example.com", password: "password123", role: "admin" },
-    { _id: new mongoose.Types.ObjectId(), name: "PepinosPower", email: "user@gmail.com", password: "1", role: "user" }
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user@example.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "PepinosPower", email: "pepino@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "edward", email: "edward@gmail.com", password: "1", role: "admin" },
+    { _id: new mongoose.Types.ObjectId(), name: "bea", email: "bea@example.com", password: "1", role: "admin" },
+    { _id: new mongoose.Types.ObjectId(), name: "ivan", email: "ivan@example.com", password: "1", role: "admin" }
 ];
 
 const movies = [
