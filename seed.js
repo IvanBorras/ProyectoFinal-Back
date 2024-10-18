@@ -14,11 +14,29 @@ mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch(err => console.error('MongoDB connection error:', err));
 
   const users = [
-    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user@example.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user1@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user2@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user3@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user4@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user5@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user6@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user7@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user8@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user9@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user10@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user11@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user12@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user13@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user14@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user15@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user16@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user17@gmail.com", password: "1", role: "user" },
+    { _id: new mongoose.Types.ObjectId(), name: "user", email: "user18@gmail.com", password: "1", role: "user" },
     { _id: new mongoose.Types.ObjectId(), name: "PepinosPower", email: "pepino@gmail.com", password: "1", role: "user" },
     { _id: new mongoose.Types.ObjectId(), name: "edward", email: "edward@gmail.com", password: "1", role: "admin" },
-    { _id: new mongoose.Types.ObjectId(), name: "bea", email: "bea@example.com", password: "1", role: "admin" },
-    { _id: new mongoose.Types.ObjectId(), name: "ivan", email: "ivan@example.com", password: "1", role: "admin" }
+    { _id: new mongoose.Types.ObjectId(), name: "bea", email: "bea@gmail.com", password: "1", role: "admin" },
+    { _id: new mongoose.Types.ObjectId(), name: "ivan", email: "ivan@gmail.com", password: "1", role: "admin" }
 ];
 
 const movies = [
@@ -386,7 +404,7 @@ const bookings = [
         price: series[0].pricePerDay * 2
     },
     {
-        user: users[4]._id,
+        user: users[5]._id,
         type: "movie",
         movie: movies[10]._id,
         startDate: new Date('2025-02-08'),
@@ -410,9 +428,129 @@ const bookings = [
         price: series[0].pricePerDay * 2
     },
     {
-        user: users[2]._id,
+        user: users[6]._id,
         type: "serie",
         serie: series[7]._id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[7]._id,
+        type: "serie",
+        serie: series[7]._id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[8]._id,
+        type: "serie",
+        serie: series[7]._id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[9]._id,
+        type: "serie",
+        serie: series[7]._id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[10]._id,
+        type: "serie",
+        serie: series[7]._id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[11]._id,
+        type: "serie",
+        serie: series[7]._id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[12]._id,
+        type: "serie",
+        serie: series[0]._id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[13]._id,
+        type: "serie",
+        serie: series[4]._id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[14]._id,
+        type: "serie",
+        serie: series[7]._id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[15]._id,
+        type: "serie",
+        serie: series[8]._id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[16]._id,
+        type: "serie",
+        serie: series[7]._id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[17]._id,
+        type: "serie",
+        serie: series[7]._id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[18]._id,
+        type: "serie",
+        movie: movies[7]._id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[19]._id,
+        type: "serie",
+        serie: series[4]._id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[20]._id,
+        type: "serie",
+        serie: series[3]._id,
+        startDate: new Date('2025-02-08'),
+        endDate: new Date('2025-02-10'),
+        price: series[0].pricePerDay * 2
+    },
+    {
+        user: users[21]._id,
+        type: "serie",
+        serie: series[5]._id,
         startDate: new Date('2025-02-08'),
         endDate: new Date('2025-02-10'),
         price: series[0].pricePerDay * 2
