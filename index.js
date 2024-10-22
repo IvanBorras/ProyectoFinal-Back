@@ -17,7 +17,7 @@ app.use(express.json());
 
 // Deshabilito CORS policy
 app.use(cors({
-    origin: 'https://cinestream-chi.vercel.app' // Reemplaza con la URL de tu frontend
+    origin: 'https://cinestream-chi.vercel.app'
 }));
 
 // Conexión a MongoDB Atlas
@@ -35,15 +35,15 @@ app.use('/api/bookings', bookingRoutes);
 app.use('/api/movies', movieRoutes);
 app.use('/api/series', serieRoutes);
 
-// Definir el puerto y poner en marcha el servidor
-const PORT = process.env.PORT || 4040;
+// // Definir el puerto y poner en marcha el servidor
+// const PORT = process.env.PORT || 4040;
 
-app.get("/",(req,res)=>{
+app.get("/", (req,res)=>{
     res.send("Express en Vercel")
 })
 
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-});
+// app.listen(PORT, () => {
+//     console.log(`Server running on http://localhost:${PORT}`);
+// });
 
 module.exports = app
