@@ -17,7 +17,7 @@ app.use(express.json());
 
 // Deshabilito CORS policy
 app.use(cors({
-    origin: 'https://cinestream-chi.vercel.app/' // Reemplaza con la URL de tu frontend
+    origin: 'https://cinestream-chi.vercel.app' // Reemplaza con la URL de tu frontend
 }));
 
 // Conexión a MongoDB Atlas
