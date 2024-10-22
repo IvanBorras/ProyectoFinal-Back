@@ -15,10 +15,14 @@ const app = express();
 // Middleware para parsear JSON
 app.use(express.json());
 
-// Deshabilito CORS policy
-app.use(cors({
-    origin: ['https://cinestream-chi.vercel.app', 'https://proyecto-final-back-pqe9859i5-ivanborras-projects.vercel.app']
-}));
+// Configurar CORS
+const corsOptions = {
+    origin: 'https://cinestream-chi.vercel.app', // Permitir solo este dominio
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Métodos permitidos
+    credentials: true, // Permitir credenciales (cookies, etc.)
+  };
+  
+  app.use(cors(corsOptions));
 
 
 // Conexión a MongoDB Atlas
