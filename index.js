@@ -15,14 +15,23 @@ const app = express();
 // Middleware para parsear JSON
 app.use(express.json());
 
-// Configurar CORS
-const corsOptions = {
-    origin: 'https://cinestream-chi.vercel.app', // Permitir solo este dominio
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Métodos permitidos
-    credentials: true, // Permitir credenciales (cookies, etc.)
-  };
+// // Configurar CORS
+// const corsOptions = {
+//     origin: 'https://cinestream-chi.vercel.app', // Permitir solo este dominio
+//     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Métodos permitidos
+//     credentials: true, // Permitir credenciales (cookies, etc.)
+//   };
   
-  app.use(cors(corsOptions));
+//   app.use(cors(corsOptions));
+
+
+  // Configurar CORS manualmente
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'https://cinestream-chi.vercel.app');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    res.header('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE'); // Si necesitas especificar métodos
+    next();
+  });
 
 
 // Conexión a MongoDB Atlas
